@@ -5,6 +5,7 @@ import kotlin.test.assertEquals
 class Test {
     @Test
     fun testParse() {
+        //example code
         val parser = StringParser.from("{ me: \"you\" }")
         val parsed = parser.parse { lastChar, _ ->
             when (lastChar) {

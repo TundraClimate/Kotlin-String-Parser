@@ -7,6 +7,7 @@ class StringParser private constructor(private var parsingText: String) {
     private var lastChar: Char = ' '
 
     companion object {
+        //From String
         @JvmStatic
         fun from(parsingText: String): StringParser = StringParser(parsingText)
 
@@ -25,18 +26,22 @@ class StringParser private constructor(private var parsingText: String) {
         charStack += stack
     }
 
-    private fun parsing(each: (charStack: String, lastChar: Char) -> String): String {
+    fun getCharStack() = charStack
+
+    //Parsing String
+    private fun parsing(each: (lastChar: Char) -> String): String {
         var result = ""
         parsingText.forEach {
             lastChar = it
-            val s = each(charStack, lastChar)
+            val s = each(lastChar)
             result += s
         }
         return result
     }
 
-    fun parse(override: String = "", parsing: StringParser.(lastChar: Char, charStack: String) -> String): String {
+    //Wrapped Parser
+    fun parse(override: String = "", parsing: StringParser.(lastChar: Char) -> String): String {
         if (override.isNotEmpty()) parsingText = override
-        return parsing { cs, lc -> this.parsing(lc, cs) }
+        return parsing { lc -> this.parsing(lc) }
     }
 }

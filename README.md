@@ -1,7 +1,7 @@
 # Kotlin-String-Parser
 [![](https://jitpack.io/v/TundraClimate/Kotlin-String-Parser.svg)](https://jitpack.io/#TundraClimate/Kotlin-String-Parser)![GitHub](https://img.shields.io/github/license/TundraClimate/Kotlin-String-Parser)
 
-![GitHub Repo stars](https://img.shields.io/github/stars/TundraClimate/Kotlin-String-Parser?style=social) ![GitHub watchers](https://img.shields.io/github/watchers/TundraClimate/Kotlin-String-Parser?style=social)  
+![GitHub Repo stars](https://img.shields.io/github/stars/TundraClimate/Kotlin-String-Parser?style=social)  ![GitHub watchers](https://img.shields.io/github/watchers/TundraClimate/Kotlin-String-Parser?style=social)  
 This library is for running String parsing
 
 ## How to Use
